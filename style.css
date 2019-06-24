@@ -1,4 +1,16 @@
 body {
-    background: black;
+    background: rgb(77, 124, 128);
     color: white;
+    
+}
+main {
+
+}
+main div {
+    background-color: rgb(151, 154, 146);
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
