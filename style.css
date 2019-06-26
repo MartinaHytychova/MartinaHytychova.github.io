@@ -1,16 +1,272 @@
+:root {
+    --logo-outer-top: rgb(235, 100, 77); 
+    --logo-m-outer-front: rgb(235, 100, 77); 
+    --logo-inner-bot: rgb(146, 68, 68); 
+    --logo-inner-top: rgb(189, 86, 68); 
+    --logo-h-outer-front: rgb(206, 97, 78); 
+    --logo-inner-mid: rgb(167, 87, 73); 
+    --canvas-primary-color: rgb(70, 70, 70);
+    --canvas-secondary-color: rgb(255, 255, 255);
+}
 body {
-    background: rgb(77, 124, 128);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
     color: white;
-    
+    margin: 0;
 }
-main {
+section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+section aside .contact {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--canvas-primary-color);
+}
+/*
+section .content {
+    min-height: 100vh;
+}*/
+section:nth-child(even) .content {
+    background-color: var(--canvas-secondary-color);
+    color: var(--canvas-primary-color);
+}
+section:nth-child(odd) .content {
+    background-color: var(--canvas-primary-color);
+    color: white;
+}
+section .section-divider {
+    fill: var(--canvas-primary-color);
+}
+#logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    opacity: 0;
+}
 
+#logo .m-outer-front {
+    fill: var(--logo-m-outer-front);
 }
-main div {
-    background-color: rgb(151, 154, 146);
-    width: 80%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+#logo .m-inner-top {
+    fill: var(--logo-inner-top);
+}
+#logo .m-inner-bot {
+    fill: var(--logo-inner-bot);
+}
+#logo .h-outer-front {
+    fill: var(--logo-h-outer-front);
+}
+#logo .h-inner-top {
+    fill: var(--logo-inner-top);
+}
+#logo .h-inner-bot {
+    fill: var(--logo-inner-bot);
+}
+#logo .h-inner-mid {
+    fill: var(--logo-inner-mid);
+    stroke-width: 0.6;
+    stroke: var(--logo-inner-mid);
+}
+#logo .outer-top {
+    fill: var(--logo-outer-top);
+    stroke-width: 0.3;
+    stroke: var(--logo-outer-top);
+}
+
+
+
+#logo path {
+    /* fill: rgb(204,51,17); */
+    stroke-width: 0;
+    stroke: rgba(0, 0, 0, 0.3);
+}
+H1 {
+    font-family: 'Quattrocento', serif;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0;
+    animation: slide 1.2s ease forwards;
+}
+H1::after {
+    content: 'Product manager';
+    font-family: 'Quattrocento', serif;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    display: block;
+    text-align: center;
+    margin: 1rem;
+    color: var(--logo-m-outer-front);
+    opacity: 0;
+    animation: slide 1.6s ease forwards;
+}
+H1::before {
+    content: 'Hello, I am';
+    font-family: 'Quattrocento', serif;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    margin: 2rem;
+    opacity: 0;
+    animation: slide .8s ease forwards;
+}
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    right: 1rem;
+    color: var(--logo-m-outer-front);
+    font-size: 2.25rem;
+    text-align: center;
+}
+h3 {
+    font-size: 1.5rem;
+    color: var(--logo-m-outer-front);
+    margin-bottom: 0.5rem;
+}
+.aboutme {
+    display: flex;
+    justify-content: center;
+    border-top: 1px dotted rgb(184, 184, 184);
+    border-bottom: 1px dotted rgb(184, 184, 184);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.aboutme p {
+    flex: 1;
+    margin: 1rem;
+    max-width: 25rem;
+    color: rgb(255, 255, 255);
+    
+    opacity: 0;
+    animation: slide .6s ease-in-out forwards;
+}
+.aboutme p:nth-child(1) {
+    animation-delay: .2s;
+    transform: translateX(-5px);
+}
+.aboutme p:nth-child(2) {
+    animation-delay: .4s;
+    transform: translateX(5px);
+}
+.aboutme p:nth-child(3) {
+    animation-delay: .6s;
+}
+p {
+    font-family: 'Vollkorn', serif;
+    text-align: justify;
+    line-height: 2.5;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+}
+aside {
+    font-size: 1rem;
+    font-family: 'Quattrocento', serif;
+    line-height: 0;
+    position: relative;
+    height: 150px;
+}
+aside .copy {
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    border: 1px solid rgb(90, 55, 55);
+    color: var(--canvas-primary-color);
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    line-height: 0.1;
+}
+.jobs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.jobs .job {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-15px);
+    opacity: 0;
+}
+.jobs .job:nth-child(1) {
+    animation-delay: .2s;
+}
+.jobs .job:nth-child(2) {
+    animation-delay: .4s;
+}
+.jobs .job:nth-child(3) {
+    animation-delay: .6s;
+}
+.jobs .job h3 ~ span {
+    font-family: 'Quattrocento', serif;
+    font-size: 0.75rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    font-family: 'Vollkorn', serif;
+    margin: 1rem;
+    text-align: left;
+}
+.current {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.ribbon {
+    position: absolute;
+    top: 0;
+    transform: translateY(-150%);
+    text-transform: uppercase;
+    background-color: var(--logo-m-outer-front);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    line-height: 0.1;
+    letter-spacing: 1px;
+    font-family: 'Quattrocento', serif;
+}
+.slide-in {
+    animation: slide .6s ease-in-out forwards;
+}
+.logo-show {
+    animation: slide-logo .6s ease-in-out forwards;
+}
+@keyframes slide {
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-logo {
+    100% {
+        transform: translate(-50%,-20%);
+        opacity: 1;
+    }
 }
