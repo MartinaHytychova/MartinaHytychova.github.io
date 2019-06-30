@@ -315,9 +315,6 @@ ul li {
     .logo-show {
         animation: slide-logo-cell .6s ease-in-out forwards;
     }
-    .contact {
-        font-size: 0.6rem;
-    }
     .content > ul > li:nth-child(1) {
         animation-delay: 0s;
     }
