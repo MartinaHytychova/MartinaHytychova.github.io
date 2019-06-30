@@ -1,6 +1,6 @@
 :root {
     --logo-outer-top: rgb(235, 100, 77); 
-    --logo-m-outer-front: rgb(235, 100, 77); 
+    --logo-m-outer-front: rgb(77,177,178); 
     --logo-inner-bot: rgb(146, 68, 68); 
     --logo-inner-top: rgb(189, 86, 68); 
     --logo-h-outer-front: rgb(206, 97, 78); 
@@ -15,24 +15,31 @@ body {
     color: white;
     margin: 0;
 }
+#logo {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    opacity: 0;
+}
 section {
     display: flex;
     flex-direction: column;
     position: relative;
 }
-section aside .contact {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
+.contact {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
     color: var(--canvas-primary-color);
+    color: white;
+    text-align: center;
 }
-/*
-section .content {
-    min-height: 100vh;
-}*/
+.contact span {
+    margin: 0.5rem 2rem;
+}
 section:nth-child(even) .content {
     background-color: var(--canvas-secondary-color);
     color: var(--canvas-primary-color);
@@ -44,17 +51,6 @@ section:nth-child(odd) .content {
 section .section-divider {
     fill: var(--canvas-primary-color);
 }
-#logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-30%);
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    opacity: 0;
-}
-
 #logo .m-outer-front {
     fill: var(--logo-m-outer-front);
 }
@@ -99,6 +95,7 @@ H1 {
     text-align: center;
     opacity: 0;
     animation: slide 1.2s ease forwards;
+    color: var(--logo-m-outer-front);
 }
 H1::after {
     content: 'Product manager';
@@ -108,7 +105,6 @@ H1::after {
     display: block;
     text-align: center;
     margin: 1rem;
-    color: var(--logo-m-outer-front);
     opacity: 0;
     animation: slide 1.6s ease forwards;
 }
@@ -141,8 +137,8 @@ h3 {
 .aboutme {
     display: flex;
     justify-content: center;
-    border-top: 1px dotted rgb(184, 184, 184);
-    border-bottom: 1px dotted rgb(184, 184, 184);
+    border-top: 1px dotted var(--logo-m-outer-front);
+    border-bottom: 1px dotted var(--logo-m-outer-front);
     padding-top: 2rem;
     padding-bottom: 2rem;
     max-width: 60rem;
@@ -153,7 +149,6 @@ h3 {
     margin: 1rem;
     max-width: 25rem;
     color: rgb(255, 255, 255);
-    
     opacity: 0;
     animation: slide .6s ease-in-out forwards;
 }
@@ -172,10 +167,6 @@ p {
     font-family: 'Vollkorn', serif;
     text-align: justify;
     line-height: 2.5;
-}
-.contact {
-    display: flex;
-    justify-content: center;
 }
 aside {
     font-size: 1rem;
@@ -197,30 +188,43 @@ aside .copy {
     font-size: 0.75rem;
     line-height: 0.1;
 }
-.jobs {
+.content {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-.jobs .job {
+.content > ul  {
+    display: flex;
+    justify-content: space-around;
+}
+.content > ul > li {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     transform: translateX(-15px);
     opacity: 0;
+    margin: 2rem;
+    padding: 2rem;
+    flex: 1;
+    max-width: 40rem;
 }
-.jobs .job:nth-child(1) {
+.content:first-of-type {
+    display: block;
+}
+
+.content > ul > li:nth-child(1) {
     animation-delay: .2s;
 }
-.jobs .job:nth-child(2) {
-    animation-delay: .4s;
-}
-.jobs .job:nth-child(3) {
+.content > ul > li:nth-child(2) {
     animation-delay: .6s;
 }
-.jobs .job h3 ~ span {
+.content > ul > li:nth-child(3) {
+    animation-delay: 1s;
+}
+.content > ul h3 ~ span {
     font-family: 'Quattrocento', serif;
     font-size: 0.75rem;
 }
@@ -255,6 +259,9 @@ ul li {
 .slide-in {
     animation: slide .6s ease-in-out forwards;
 }
+.lift {
+    animation: slide .6s ease-in-out forwards, lift 1.2s .6s ease-in-out  forwards;
+}
 .logo-show {
     animation: slide-logo .6s ease-in-out forwards;
 }
@@ -264,9 +271,43 @@ ul li {
         opacity: 1;
     }
 }
+@keyframes lift {
+    50% {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+    100% {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        transform: translateY(-3px);
+    }
+}
 @keyframes slide-logo {
     100% {
         transform: translate(-50%,-20%);
         opacity: 1;
+    }
+}
+@media screen and (max-width: 1600px) {
+    H1::before {
+        font-size: 2rem;
+    }
+    H1::after {
+        font-size: 2.25rem;
+    }
+    .aboutme {
+        max-width: 80%;
+        flex-direction: column;
+    }
+    .aboutme p {
+        flex: 1;
+        margin: 1rem;
+        max-width: 100%;
+    }
+    .content > ul {
+        flex-direction: column-reverse;
+    }
+    .content > ul > li {
+        max-width: 45rem;
+        margin: 2rem auto;
     }
 }
