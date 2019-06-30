@@ -161,15 +161,15 @@ h3 {
     animation: slide .6s ease-in-out forwards;
 }
 .aboutme p:nth-child(1) {
-    animation-delay: .2s;
+    animation-delay: 0s;
     transform: translateX(-5px);
 }
 .aboutme p:nth-child(2) {
-    animation-delay: .4s;
+    animation-delay: .2s;
     transform: translateX(5px);
 }
 .aboutme p:nth-child(3) {
-    animation-delay: .6s;
+    animation-delay: .4s;
 }
 p {
     font-family: 'Vollkorn', serif;
@@ -321,5 +321,14 @@ ul li {
     }
     .contact {
         font-size: 0.6rem;
+    }
+    .content > ul > li:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .content > ul > li:nth-child(2) {
+        animation-delay: 0s;
+    }
+    .content > ul > li:nth-child(3) {
+        animation-delay: 0s;
     }
 }
