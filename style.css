@@ -14,8 +14,11 @@ body {
     background-color: white;
     color: white;
     margin: 0;
+
+}
+main {
     overflow-x: hidden;
-    max-width: 100vw;
+    width: 100vw;
 }
 #logo {
     position: absolute;
@@ -34,6 +37,8 @@ section {
 .contact {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     color: var(--canvas-primary-color);
     color: white;
     text-align: center;
@@ -277,7 +282,7 @@ ul li {
 }
 @keyframes slide-logo-cell {
     100% {
-        transform: translate(-50%,-130%);
+        transform: translate(-50%,-105%);
         opacity: 1;
     }
 }
@@ -307,11 +312,13 @@ ul li {
     }
 
 }
-
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .logo-show {
         animation: slide-logo-cell .6s ease-in-out forwards;
+    }
+    .contact {
+        font-size: 0.6rem;
     }
 }
