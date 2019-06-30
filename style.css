@@ -282,7 +282,7 @@ ul li {
 }
 @keyframes slide-logo-cell {
     100% {
-        transform: translate(-50%,-105%);
+        transform: translate(-50%,-15%);
         opacity: 1;
     }
 }
