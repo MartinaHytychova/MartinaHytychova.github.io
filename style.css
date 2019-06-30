@@ -315,9 +315,6 @@ ul li {
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    .logo-show {
-        animation: slide-logo-cell .6s ease-in-out forwards;
-    }
     .contact {
         font-size: 0.6rem;
     }
