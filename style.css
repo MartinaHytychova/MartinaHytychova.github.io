@@ -1,330 +1,185 @@
-:root {
-    --logo-outer-top: rgb(235, 100, 77); 
-    --logo-m-outer-front: rgb(77,177,178); 
-    --logo-inner-bot: rgb(146, 68, 68); 
-    --logo-inner-top: rgb(189, 86, 68); 
-    --logo-h-outer-front: rgb(206, 97, 78); 
-    --logo-inner-mid: rgb(167, 87, 73); 
-    --canvas-primary-color: rgb(70, 70, 70);
-    --canvas-secondary-color: rgb(255, 255, 255);
-}
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    color: white;
-    margin: 0;
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-main {
-    overflow-x: hidden;
-}
-#logo {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 200px;
-    height: 200px;
-    opacity: 0;
-}
-section {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.contact {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    color: var(--canvas-primary-color);
-    color: white;
-    text-align: center;
-}
-.contact span {
-    margin: 0.5rem 2rem;
-    text-decoration: none;
-}
-section:nth-child(even) .content {
-    background-color: var(--canvas-secondary-color);
-    color: var(--canvas-primary-color);
-}
-section:nth-child(odd) .content {
-    background-color: var(--canvas-primary-color);
-    color: white;
-}
-section .section-divider {
-    fill: var(--canvas-primary-color);
-    transform: scale(1.03);
-}
-#logo .m-outer-front {
-    fill: var(--logo-m-outer-front);
-}
-#logo .m-inner-top {
-    fill: var(--logo-inner-top);
-}
-#logo .m-inner-bot {
-    fill: var(--logo-inner-bot);
-}
-#logo .h-outer-front {
-    fill: var(--logo-h-outer-front);
-}
-#logo .h-inner-top {
-    fill: var(--logo-inner-top);
-}
-#logo .h-inner-bot {
-    fill: var(--logo-inner-bot);
-}
-#logo .h-inner-mid {
-    fill: var(--logo-inner-mid);
-    stroke-width: 0.6;
-    stroke: var(--logo-inner-mid);
-}
-#logo .outer-top {
-    fill: var(--logo-outer-top);
-    stroke-width: 0.3;
-    stroke: var(--logo-outer-top);
-}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="Martina Hytychova's Resume">
+  <meta name="author" content="Martina">
+  <meta name="format-detection" content="telephone=no">
+  <script src="js.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <section>
+
+      <aside>
+        <svg height="100%" width="100%" viewBox="0 0 100 10" class="section-divider" preserveAspectRatio="none">
+          <path d="M0,0 L0,10 L100,10 Z"/>
+        </svg>
+      </aside>
+      <div class="content">
+        <svg id="logo" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+          <g transform="matrix(1,0,0,1,5.8327,-1)">
+              <path d="M20.148,28L26.942,48.077L38.335,41.5L30.54,22L20.148,28Z" style="fill:rgb(53,123,124);"/>
+          </g>
+          <g transform="matrix(1,0,0,1,5.8327,-1)">
+              <path d="M30.54,34L40.933,28L51.325,34L40.933,40L30.54,34ZM9.756,22L20.148,28L30.54,22L20.148,16L9.756,22ZM61.717,28L51.325,22L61.717,16L72.11,22L61.717,28Z" style="fill:rgb(77,177,178);stroke:rgb(77,177,178);stroke-width:0.1px;"/>
+          </g>
+          <g transform="matrix(1,0,0,1,5.8327,-1)">
+              <path d="M20.148,70L30.54,64L30.54,46L20.148,52L20.148,70Z" style="fill:rgb(46,106,106);stroke:rgb(46,106,106);stroke-width:0.1px;"/>
+          </g>
+          <g transform="matrix(1,0,0,1,5.8327,-1)">
+              <path d="M9.756,22L9.756,64L20.148,70L20.148,52L25.344,67L30.54,58L30.54,76L40.933,82L40.933,40L30.54,34L25.344,43L20.148,28L9.756,22Z" style="fill:rgb(77,177,178);stroke:rgb(77,177,178);stroke-width:0.1px;"/>
+          </g>
+          <g transform="matrix(1,0,0,1,5.8327,-1)">
+              <path d="M51.325,52L61.717,46L51.325,40L40.933,46L51.325,52Z" style="fill:rgb(46,106,106);stroke:rgb(46,106,106);stroke-width:0.1px;"/>
+          </g>
+          <g transform="matrix(1,0,0,1,5.8327,-1)">
+              <path d="M61.717,70L51.325,64L51.325,52L61.717,58L61.717,70Z" style="fill:rgb(46,106,106);stroke:rgb(46,106,106);stroke-width:0.1px;"/>
+          </g>
+          <g transform="matrix(1,0,0,1,5.8327,-1)">
+              <path d="M51.325,22L61.717,28L61.717,46L51.325,40L51.325,22Z" style="fill:rgb(53,123,124);stroke:rgb(53,123,124);stroke-width:0.1px;"/>
+          </g>
+          <g transform="matrix(1,0,0,1,11.0289,2)">
+              <path d="M35.737,79L46.129,73L46.129,61L56.521,55L56.521,67L66.913,61L66.913,19L56.521,25L56.521,43L46.129,49L46.129,31L35.737,37L35.737,79Z" style="fill:rgb(61,141,142);stroke:rgb(61,141,142);stroke-width:0.1px;"/>
+          </g>
+      </svg>
+        <h1>Martina Hytychová</h1>
+        <div class="contact">
+          <span>+420 756 896 245</span>
+          <span>martinahyt@gmail.com</span>
+        </div>
+        <div class="aboutme">
+          <p>
+              Do současnosti jsem prošla několika obory a pracovními pozicemi, které měly několik společných rysů. Každodenní kontakt s lidmi, různorodá náplň pracovního dne, organizovanost společně s plánováním a analýzami. Vždy mě lákala možnost po sobě zanechat stopu. Například uvedení úspěšných nových a inovativních produktů na tuzemský a slovenský trh na poli obalů a strojů, čehož dosahuji na své současné pozici Produktové a Marketingové manažerky.
+          </p>
+          <p>
+              V minulosti se jednalo například o rozšíření, ale zároveň prohloubení prodejní sítě zákazníků na pozici Obchodní zástupce. Případně v podobě projektů, které jsem tvořila ve školství pro žáky i veřejnost jako Pedagog. Propracované plány a správná organizace mého času znamenala uspokojení z dobře odvedené práce. Čekám výzvy a chci být hybným článkem, který se
+              zapojí se do vytváření inovativních produktů či služeb.
+
+              být hybným článkem, který očekává výzvy
+              zapojí se do vytváření něčeho nového
+              být ve firmě, která je dynamická a soustředí se na inovativní produkt/službu.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <aside>
+        <svg height="100%" width="100%" viewBox="0 0 100 10" class="section-divider" preserveAspectRatio="none">
+          <path d="M0,0 L0,10 L100,0 Z"/>
+        </svg>
+        <h2>Jobs</h2>
+      </aside>
+        <div class="content">
+          <ul>
+            <li class="job current">
+              <div class="ribbon"><span>current</span></div>
+              <h3>Product and marketing manager</h3>
+              <span>9/2018 - now</span>
+              <ul>
+                <li>analyzing and planning of Marketing, Mailing and Timing plan</li>
+                <li>Product and Sales reports</li>
+                <li>analyzing competitors, market research</li>
+                <li>proposing and searching of new products</li>
+                <li>creating product content</li>
+                <li>product campaigns, translation of CZ/SK manuals</li>
+                <li>product training of sales people and agencies</li>
+                <li>creating printed materials and documents
+                  <ul>
+                    <li>big Catalogue each six months</li>
+                    <li>small catalogues each month</li>
+                    <li>additional special flyers</li>
+                  </ul>
+                </li>
+                <li>collecting and analyzing reviews from customers</li>
+                <li>solving complaints with vendors or warehouses</li>
+                <li>attending exhibitions, conferences, workshops and technical seminars</li>
+                <li>communication with current vendors and searching for new ones</li>
+                <li>preparing of promo materials, gifts, etc.</li>
+                <li>leading and managing CZ/SK projects concerning brand, products </li>
+              </ul>
+            </li>
+            <li class="job">
+              <h3>Sales representative</h3>
+              <span>3/2017 - 8/2018</span>
+              <ul>
+                <li>researching and calling prospects for new sales opportunities</li>
+                <li>promoting products at exhibition</li>
+                <li>ensuring customer satisfaction</li>
+                <li>building portofolio of clients</li>
+                <li>developing and maintaining relationships with existing and new clients</li>
+                <li>generating leads and appointments</li>
+                <li>suggesting appropriate products, resolution of all the issues and request of the customers in a timely manner</li>
+                <li>providing regular feedback to management regarding customer issues/competitor activities</li>
+                <li>attending events in order to built relationships with potential customers </li>
+                <li>lecturing owners and management from small to mid-sized companies</li>
+              </ul>
+            </li>
+            <li class="job">
+              <h3>Primary class teacher</h3>
+              <span>9/2011 - 7/2017</span>
+              <ul>
+                <li>working in partnership with pupils, staff, parents and the community</li>
+                <li>designing, preparing and delivering of inspiring and challenging school lessons</li>
+                <li>promoting the enjoyment of learning in the outdoors</li>
+                <li>contributing to the extra-curricular activities programme</li>
+                <li>participating in school activities
+                    <ul>
+                        <li>assemblies</li>
+                        <li>parent evening events</li>
+                        <li>conferences</li>
+                        <li>workshops</li>
+                    </ul>
+                </li>
+                <li>developing meaningful relationships with children</li>
+                <li>documenting all activities and interactions in CRM too</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </section>
+    <section>
+      <aside>
+        <svg height="100%" width="100%" viewBox="0 0 100 10" class="section-divider" preserveAspectRatio="none">
+          <path d="M0,0 L0,10 L100,10 Z"/>
+        </svg>
+        <h2>Education</h2>
+      </aside>
+      <div class="content">
+        <ul>
+          <li class="job">
+            <h3>SOŠ OTŽP Veselí nad Lužnicí</h3>
+            <span>Ecology and Environmental Protection</span>
+            <span>2007-2011</span>
+          </li>
+          <li class="job">
+            <h3>SŠ Mladá Boleslav</h3>
+            <span>Leisure time Education</span>
+            <span>2013 - 2014</span>
+          </li>
+          <li class="job">
+            <h3>SSŠ MAJA s.r.o.</h3>
+            <span>Pre-school Education</span>
+            <span>2014 - 2015</span>
+          </li>
+          <li class="job">
+            <h3>Univerzita Hradec Králové</h3>
+            <span>Information Management</span>
+            <span>2019 - ...</span>
+            </li>
+        </ul>
+      </div>
+    </section>
 
 
-
-#logo path {
-    /* fill: rgb(204,51,17); */
-    stroke-width: 0;
-    stroke: rgba(0, 0, 0, 0.3);
-}
-H1 {
-    font-family: 'Quattrocento', serif;
-    letter-spacing: 3px;
-    font-size: 3rem;
-    font-weight: 300;
-    text-align: center;
-    opacity: 0;
-    animation: slide 1.2s ease forwards;
-    color: var(--logo-m-outer-front);
-}
-H1::after {
-    content: 'Product manager';
-    font-family: 'Quattrocento', serif;
-    letter-spacing: 1px;
-    font-size: 1.25rem;
-    display: block;
-    text-align: center;
-    margin: 1rem;
-    opacity: 0;
-    animation: slide 1.6s ease forwards;
-}
-H1::before {
-    content: 'Hello, I am';
-    font-family: 'Quattrocento', serif;
-    letter-spacing: 1px;
-    font-size: 1rem;
-    display: block;
-    text-align: center;
-    margin: 2rem;
-    opacity: 0;
-    animation: slide .8s ease forwards;
-}
-h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    right: 1rem;
-    color: var(--logo-m-outer-front);
-    font-size: 2.25rem;
-    text-align: center;
-}
-h3 {
-    font-size: 1.5rem;
-    color: var(--logo-m-outer-front);
-    margin-bottom: 0.5rem;
-}
-.aboutme {
-    display: flex;
-    justify-content: center;
-    border-top: 1px dotted var(--logo-m-outer-front);
-    border-bottom: 1px dotted var(--logo-m-outer-front);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    max-width: 60rem;
-    margin: 0 auto;
-}
-.aboutme p {
-    flex: 1;
-    margin: 1rem;
-    max-width: 25rem;
-    color: rgb(255, 255, 255);
-    opacity: 0;
-    animation: slide .6s ease-in-out forwards;
-}
-.aboutme p:nth-child(1) {
-    animation-delay: 0s;
-    transform: translateX(-5px);
-}
-.aboutme p:nth-child(2) {
-    animation-delay: .2s;
-    transform: translateX(5px);
-}
-.aboutme p:nth-child(3) {
-    animation-delay: .4s;
-}
-p {
-    font-family: 'Vollkorn', serif;
-    text-align: justify;
-    line-height: 2.5;
-}
-aside {
-    font-family: 'Quattrocento', serif;
-    line-height: 0;
-    position: relative;
-    height: 150px;
-}
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.content > ul  {
-    display: flex;
-    justify-content: space-around;
-}
-.content > ul > li {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    transform: translateX(-15px);
-    opacity: 0;
-    margin: 2rem;
-    padding: 2rem;
-    flex: 1;
-    max-width: 40rem;
-}
-.content:first-of-type {
-    display: block;
-}
-
-.content > ul > li:nth-child(1) {
-    animation-delay: .2s;
-}
-.content > ul > li:nth-child(2) {
-    animation-delay: .6s;
-}
-.content > ul > li:nth-child(3) {
-    animation-delay: 1s;
-}
-.content > ul h3 ~ span {
-    font-family: 'Quattrocento', serif;
-    font-size: 0.75rem;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-ul li {
-    font-family: 'Vollkorn', serif;
-    margin: 1rem;
-    text-align: left;
-}
-.ribbon {
-    position: absolute;
-    top: 0;
-    transform: translateY(-150%);
-    text-transform: uppercase;
-    background-color: var(--logo-m-outer-front);
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    font-size: 0.75rem;
-    line-height: 0.1;
-    letter-spacing: 1px;
-    font-family: 'Quattrocento', serif;
-}
-.slide-in {
-    animation: slide .6s ease-in-out forwards;
-}
-.lift {
-    animation: slide .6s ease-in-out forwards, lift 1.2s .6s ease-in-out  forwards;
-}
-.logo-show {
-    animation: slide-logo .6s ease-in-out forwards;
-}
-@keyframes slide {
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-@keyframes lift {
-    50% {
-        box-shadow: none;
-        transform: translateY(0px);
-    }
-    100% {
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        transform: translateY(-3px);
-    }
-}
-@keyframes slide-logo {
-    100% {
-        transform: translate(-50%,-30%);
-        opacity: 1;
-    }
-}
-@keyframes slide-logo-cell {
-    100% {
-        transform: translate(-50%,-20%);
-        opacity: 1;
-    }
-}
-@media screen and (max-width: 1600px) {
-    H1::before {
-        font-size: 2rem;
-    }
-    H1::after {
-        font-size: 2.25rem;
-    }
-    .aboutme {
-        max-width: 80%;
-        flex-direction: column;
-    }
-    .aboutme p {
-        flex: 1;
-        margin: 1rem;
-        max-width: 100%;
-    }
-    .content > ul {
-        min-width: 80%;
-        margin: 2rem auto;
-        display: block;
-    }
-    .content > ul > li {
-        margin: 2rem auto;
-    }
-
-}
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-    .logo-show {
-        animation: slide-logo-cell .6s ease-in-out forwards;
-    }
-    .contact {
-        font-size: 0.6rem;
-    }
-    .content > ul > li:nth-child(1) {
-        animation-delay: 0s;
-    }
-    .content > ul > li:nth-child(2) {
-        animation-delay: 0s;
-    }
-    .content > ul > li:nth-child(3) {
-        animation-delay: 0s;
-    }
-}
+  </main>
+  <script src="js.js"></script>
+</body>
+</html>
