@@ -130,7 +130,7 @@ H1::before {
 }
 h2 {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     right: 1rem;
