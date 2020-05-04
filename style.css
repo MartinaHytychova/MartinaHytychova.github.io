@@ -128,7 +128,7 @@ h1 {
 }
 
 h1::after {
-    content: "HTML/CSS coder";
+    content: "Frontend Developer";
     font-family: "Quattrocento", serif;
     letter-spacing: 1px;
     font-size: 1.25rem;
